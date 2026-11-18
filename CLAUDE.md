@@ -24,7 +24,7 @@
 - **Toast通知**: `lib/toast.tsx` の `ToastProvider` / `useToast`（外部ライブラリ不使用）
 - **CSVエクスポート**: `lib/csv-export.ts` の共通関数を使う（外部ライブラリ不使用）
 - **CSVインポート**: Papa Parse（ブラウザ上で解析）
-- **PDF出力**: `@react-pdf/renderer` + Noto Sans JP OTF（`public/fonts/NotoSansJP-Regular.otf`）
+- **PDF出力**: `@react-pdf/renderer` + Noto Sans CJK JP Regular 2.004 の OTF（ファイル名は `public/fonts/NotoSansJP-Regular.otf`。ライセンスは `public/fonts/OFL.txt`）
   - API Route（Node.js runtime）で `renderToBuffer()` → クライアント側で blob ダウンロード
   - 日本語フォントは `lib/pdf/fonts.ts` の `registerFonts()`（シングルトン）で登録
 
