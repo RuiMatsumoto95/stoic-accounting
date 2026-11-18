@@ -1,6 +1,7 @@
 .env.local 
 node_modules/ 
 .next/ 
+next-env.d.ts
 supabase/.temp/
 *.tsbuildinfo
 .env*

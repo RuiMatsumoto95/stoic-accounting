@@ -59,7 +59,7 @@ Claude Code への実装依頼は以下の3点セットで記述する。
   - 例外: `@react-pdf/renderer`（PDF生成）・`papa parse`（CSVインポート）は導入済み
   - 例外（devDependency）: `vitest`（自動テスト。2026-11-01 導入）。テスト専用で本番バンドルには入らない。React コンポーネントのテストに広げるときは `jsdom` / `@testing-library/react` / `@vitejs/plugin-react` を追加してよい
 - **自動テスト**: `npm test`（= `vitest run`）。テストは `__tests__/` に置き（例: `__tests__/csv-amount.test.ts`）、純粋関数から対象にする。`lib/supabase` を import するモジュールは `vi.mock('@/lib/supabase', ...)` で差し替える（import 時に `createClient` が走るため）。金額まわり（`lib/csv-amount.ts` / `lib/journal-save.ts`）を変更したら `npm test` を通すこと。CI は `.github/workflows/test.yml`（`npm ci` と `npm test` のみ。`npm run build` は `/settings` がビルド時に DB へ接続するため CI に含めない。lint は既存の `react-hooks/set-state-in-effect` 指摘が残るため未導入）
-- **型チェック**: `npm run typecheck`（= `tsc --noEmit`）。CI（GitHub Actions の `test`）は `npm test` に続けて実行する。`build` と `lint` は CI に含めない（理由は `.github/workflows/test.yml` のコメント）。
+- **型チェック**: `npm run typecheck`。`next typegen` で型を生成してから `tsc --noEmit` を実行する。CI（GitHub Actions の `test`）は `npm test` に続けて実行する。`build` と `lint` は CI に含めない（理由は `.github/workflows/test.yml` のコメント）。
 - **TypeScript の型エラーを出さない**
 - **実装後に `npm run build` を実行**してエラーがないことを確認する
 - 残高計算・集計は原則アプリ側で行う。期首は PostgreSQL 関数 `get_opening_balances_for_period(target_period_id)` をRPCで取得する（SECURITY INVOKER）。手動設定のある期はその明細、なければ前の期からの導出値（損益・個人の事業主貸借は繰越先へ畳み込み済み。ステップ2）。PL/BSの当期明細は `lib/financial-statements.ts` の直接クエリで取得し、純粋関数で集計する。DBの `get_pl_data` は残るが、アプリコードに呼び出しはない。
