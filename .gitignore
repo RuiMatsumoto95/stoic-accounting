@@ -1,0 +1,9 @@
+.env.local 
+node_modules/ 
+.next/ 
+supabase/.temp/
+*.tsbuildinfo
+.env*
+!.env.example
+.claude/settings.local.json
+Claude outputs/

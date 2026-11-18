@@ -1,0 +1,23 @@
+name: test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - run: npm run typecheck
+      # 型チェック（tsc --noEmit）は、ビルドも DB 接続も不要なので CI に含める。
+      # build と lint は CI に含めない。
+      # ・build: /settings がビルド時に DB へ問い合わせるため、接続情報の無い CI では失敗する
+      # ・lint: 既存の react-hooks/set-state-in-effect 指摘が残っている

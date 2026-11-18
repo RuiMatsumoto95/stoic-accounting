@@ -1,0 +1,390 @@
+.container {
+  container-type: inline-size;
+  font-size: 13px;
+  color: #18181b;
+}
+
+.large {
+  font-size: 16px;
+}
+
+.container button,
+.container input {
+  font-size: 1em;
+}
+
+.viewport {
+  overflow-x: auto;
+}
+
+.table {
+  min-width: 38em;
+  border: 1px solid #d4d4d8;
+  border-radius: 0.46em;
+  overflow: hidden;
+}
+
+.grid {
+  --journal-summary-column: 2 / -1;
+  --journal-actions-column: 2 / -1;
+  --journal-summary-row: var(--journal-description-row);
+  display: grid;
+  grid-template-columns: var(--journal-compact-columns);
+}
+
+.header {
+  background: #e4e4e7;
+  font-weight: 600;
+  min-height: 2.45em;
+  align-items: center;
+}
+
+.headerCell {
+  min-width: 0;
+  padding: 0.3em 0.5em;
+}
+
+.headerLine {
+  display: block;
+  min-height: 1.85em;
+  line-height: 1.85em;
+  white-space: nowrap;
+}
+
+.wideOnly,
+.fullDate {
+  display: none;
+}
+
+.headerNote {
+  padding: 0 0.5em 0.3em 2.7em;
+  font-size: 1em;
+  color: #3f3f46;
+  background: #e4e4e7;
+}
+
+.entry {
+  background: #fff;
+  border-bottom: 1px solid #d4d4d8;
+  break-inside: avoid;
+}
+
+.striped {
+  background: #f4f4f5;
+}
+
+.selected {
+  background: #eff6ff;
+}
+
+.row {
+  display: contents;
+}
+
+.cell {
+  min-width: 0;
+  min-height: 1.85em;
+  line-height: 1.85em;
+  padding: 0 0.5em;
+  font-size: 1em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.secondary {
+  color: #3f3f46;
+}
+
+.amount {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-row-end: span 2;
+}
+
+.account {
+  font-weight: 600;
+}
+
+.navCell {
+  position: relative;
+}
+
+.navCell:focus {
+  outline: 2px solid #2563eb;
+  outline-offset: -2px;
+  background: #fff;
+}
+
+.indicator {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 24px;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid #bfdbfe;
+  background: #fff;
+}
+
+.account:focus {
+  padding-right: 26px;
+}
+
+.account:focus .indicator {
+  display: flex;
+}
+
+.summary {
+  min-width: 0;
+  padding-right: 2.5em;
+  padding-bottom: 0.3em;
+}
+
+.selected .summary {
+  padding-right: 10.5em;
+}
+
+.description {
+  padding-left: 1.5em;
+}
+
+.glyph {
+  position: absolute;
+  left: 0.3em;
+  color: #71717a;
+}
+
+.supplement {
+  padding-left: 1.5em;
+}
+
+.closed {
+  display: none;
+}
+
+.actions {
+  justify-self: end;
+  align-self: start;
+  padding: 0 0.3em;
+  display: flex;
+  gap: 0.3em;
+  align-items: center;
+  height: 1.85em;
+}
+
+.actionButton {
+  height: 1.65em;
+  padding: 0 0.5em;
+  border: 1px solid #d4d4d8;
+  border-radius: 0.3em;
+  background: #fff;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.toggle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.7em;
+  padding: 0;
+}
+
+.supplementMark {
+  position: absolute;
+  top: 0.12em;
+  right: 0.12em;
+  width: 0.3em;
+  height: 0.3em;
+  border-radius: 50%;
+  background: #3f3f46;
+}
+
+.empty {
+  padding: 1em;
+  color: #3f3f46;
+}
+
+.editEntry {
+  font-size: 1em;
+  break-inside: avoid;
+}
+
+.editRow {
+  padding: 0.3em 0;
+  background: #fff;
+  border-bottom: 1px solid #d4d4d8;
+}
+
+.inputCell {
+  min-width: 0;
+  padding: 0.12em 0.25em;
+}
+
+.editorSummary {
+  display: grid;
+  min-width: 0;
+  padding: 0.12em 0.25em;
+  gap: 0.24em;
+}
+
+.editorSummary .inputCell {
+  padding: 0;
+}
+
+.editEntry input,
+.editEntry [data-slot="select-trigger"] {
+  width: 100%;
+  min-width: 0;
+  height: 1.85em;
+  padding: 0 0.4em;
+  font-size: 1em;
+  border-radius: 0.3em;
+}
+
+.editEntry [data-slot="select-trigger"] {
+  gap: 0.15em;
+  padding: 0 0.25em;
+}
+
+.editEntry [data-slot="select-trigger"] svg {
+  width: 0.8em;
+  height: 0.8em;
+}
+
+.editEntry p {
+  font-size: 1em;
+}
+
+.inlineForm {
+  border-top: 2px solid #18181b;
+}
+
+.inlineForm .editorSummary {
+  padding-right: 10.5em;
+}
+
+.formActions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-content: start;
+  align-items: center;
+  justify-self: end;
+  align-self: start;
+  width: 10em;
+  min-width: 0;
+  padding: 0.12em 0.25em;
+  gap: 0.24em;
+}
+
+.formActions > .actionButton {
+  width: 100%;
+  min-width: 0;
+}
+
+.actionButton.primaryAction {
+  padding: 0 0.25em;
+  background: #18181b;
+  color: #fff;
+  border-color: #18181b;
+}
+
+.actionButton.primaryAction:hover:not(:disabled) {
+  background: #3f3f46;
+  border-color: #3f3f46;
+}
+
+.actionButton.primaryAction:disabled {
+  background: #71717a;
+  color: #fff;
+  border-color: #71717a;
+  opacity: 1;
+  pointer-events: auto;
+  cursor: not-allowed;
+}
+
+.actionButton.primaryAction:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+.removableAccount {
+  padding-right: 2.25em;
+}
+
+.removeCell {
+  justify-self: end;
+  align-self: center;
+  margin-right: 0.25em;
+}
+
+.removeCell button {
+  width: 1.65em;
+  padding: 0;
+}
+
+/* 列幅の下限は全画面型67.9em／半画面型35.2em。最大化の一覧幅約1215pxは16pxでも約75.9emとなるため、72emで切り替える。 */
+@container (min-width: 72em) {
+  .grid {
+    --journal-summary-column: 7;
+    --journal-actions-column: 8;
+    --journal-summary-row: 1 / span 2;
+    grid-template-columns: var(--journal-full-columns);
+  }
+
+  .wideOnly,
+  .fullDate,
+  .closed {
+    display: block;
+  }
+
+  .compactDate,
+  .headerNote,
+  .glyph,
+  .toggle {
+    display: none;
+  }
+
+  .summary,
+  .selected .summary {
+    padding: 0;
+  }
+
+  .description,
+  .supplement {
+    padding-left: 0.5em;
+  }
+
+  .actions {
+    justify-self: stretch;
+    align-self: stretch;
+    justify-content: center;
+    height: auto;
+  }
+
+  /* 操作欄の10em幅を保ち、8em列から摘要側にはみ出す2emを余白で確保する。 */
+  .inlineForm .editorSummary {
+    padding-right: 2.25em;
+  }
+
+  .formActions {
+    --journal-actions-column: 7 / -1;
+  }
+}
+
+@media print {
+  .viewport,
+  .table {
+    overflow: visible;
+  }
+}

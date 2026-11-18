@@ -1,0 +1,121 @@
+# =============================================================
+# .claudeignore — タスク別コンテキスト節約設定
+#
+# 使い方：
+#   作業内容に合わせて下記4パターンのうち1つを選び、
+#   そのブロックの内容でこのファイルを丸ごと上書きする。
+#   切り替え後は新しいセッション（/clear）で効果が出る。
+#
+# パターン一覧：
+#   A: 仕訳入力系   — journals / accounts / InlineForm など
+#   B: 財務諸表系   — PL / BS / 試算表 / 消費税
+#   C: 設定画面系   — 期間管理 / テンプレート / 表示設定
+#   D: PDF出力系    — API Route / Document コンポーネント
+# =============================================================
+
+
+# =============================================================
+# パターン A: 仕訳入力系タスク（現在アクティブ）
+# journals / accounts / InlineForm / キーボード操作 など
+# =============================================================
+
+# PDF関連（不要）
+app/api/pdf/*
+components/pdf/*
+lib/pdf/*
+
+# 財務諸表関連（不要）
+components/financial-statements/*
+lib/financial-statements.ts
+lib/financial-statements-ui.ts
+lib/reports/income-statement.ts
+lib/reports/balance-sheet.ts
+lib/reports/trial-balance.ts
+lib/reports/tax-summary.ts
+lib/reports/subsidiary-balance.ts
+lib/reports/subsidiary-ledger.ts
+
+# 財務諸表ページ（不要）
+app/income-statement/*
+app/balance-sheet/*
+app/trial-balance/*
+app/subsidiary-balance/*
+app/subsidiary-ledger/*
+app/tax-summary/*
+
+# 共通
+*.log
+docs/
+handover/
+
+
+# =============================================================
+# パターン B: 財務諸表系タスク
+# PL / BS / 試算表 / 消費税 / 補助残高 など
+# =============================================================
+#
+# app/api/pdf/*
+# components/pdf/*
+# lib/pdf/*
+# components/journals/*
+# app/journals/*
+# app/accounts/*
+# app/csv-import/*
+# lib/journal-templates.ts
+# lib/account-search.ts
+# lib/csv-export.ts
+# lib/csv-import.ts
+# *.log
+# docs/
+# handover/
+
+
+# =============================================================
+# パターン C: 設定画面系タスク
+# 期間管理 / テンプレート管理 / 表示設定 など
+# =============================================================
+#
+# app/api/pdf/*
+# components/pdf/*
+# lib/pdf/*
+# components/financial-statements/*
+# lib/financial-statements.ts
+# lib/financial-statements-ui.ts
+# lib/reports/*
+# components/ledger/*
+# components/tax-summary/*
+# app/income-statement/*
+# app/balance-sheet/*
+# app/trial-balance/*
+# app/subsidiary-balance/*
+# app/subsidiary-ledger/*
+# app/tax-summary/*
+# app/ledger/*
+# *.log
+# docs/
+# handover/
+
+
+# =============================================================
+# パターン D: PDF出力系タスク
+# API Route / Document コンポーネント / フォント / pdf-utils
+# =============================================================
+#
+# components/journals/InlineJournalForm.tsx
+# components/journals/InlineEditRow.tsx
+# components/journals/JournalSearch.tsx
+# components/journals/TemplateManager.tsx
+# components/journals/TemplateSelector.tsx
+# components/settings/*
+# contexts/*
+# app/journals/*
+# app/accounts/*
+# app/csv-import/*
+# app/settings/*
+# lib/journal-templates.ts
+# lib/csv-export.ts
+# lib/csv-import.ts
+# lib/display-settings.ts
+# *.log
+# docs/
+# handover/
