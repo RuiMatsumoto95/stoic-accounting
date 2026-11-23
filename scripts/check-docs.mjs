@@ -49,8 +49,8 @@ const adrIds = new Set(
 const driftList = []
 
 for (const f of files) {
-  const rel = relative(DOCS, f)
-  const top = rel.split(sep)[0]
+  const rel = relative(DOCS, f).split(sep).join('/')
+  const top = rel.split('/')[0]
   const text = readFileSync(f, 'utf8')
 
   // リンク（相対パスのみ。コードブロック内は除外）
@@ -67,7 +67,7 @@ for (const f of files) {
 
   if (!STATUS.includes(h.status)) err(f, `status が不正: "${h.status}"（${STATUS.join(' / ')}）`)
   if (top === '40-decisions' && rel !== '40-decisions/README.md') {
-    if (!/^ADR-\d{4}/.test(rel.split(sep).pop())) err(f, 'ADR のファイル名は ADR-0001-xxx.md の形式')
+    if (!/^ADR-\d{4}/.test(rel.split('/').pop())) err(f, 'ADR のファイル名は ADR-0001-xxx.md の形式')
     if (!h.decided) err(f, 'ADR には decided（決定日）が必要')
   }
 
