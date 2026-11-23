@@ -8,3 +8,6 @@ supabase/.temp/
 !.env.example
 .claude/settings.local.json
 Claude outputs/
+
+# 私的メモ（公開しない）
+.local-notes/
