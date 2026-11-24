@@ -9,7 +9,7 @@ related: [README.md, functions-rpc.md, triggers-constraints.md, security-rls.md]
 
 [手動マイグレーション](../../supabase/manual-migrations/) には28ファイルがある。変更SQLが10本、テストSQLが9本（うち1本はローカル専用）、適用手順・同時実行手順・検証報告が9本。
 
-変更SQLは既存DBに対して Supabase SQL Editor で手動適用した履歴で、Supabase CLI のマイグレーション履歴には登録されない。[スキーマ](../../supabase/schema.sql) は2026-11-15の年度確定適用後に取得した `public` の定義のみのダンプ。ダンプを読み込んだDBでは、反映済みの変更SQLを再実行しない。
+変更SQLは既存DBに対して Supabase SQL Editor で手動適用した履歴で、Supabase CLI のマイグレーション履歴には登録されない。[スキーマ](../../supabase/schema.sql) は2026-11-15の年度確定適用後に取得した `public` の定義のみの `pg_dump` 出力で、psqlの制限開始・解除のメタコマンド2行を除いて収録する。psqlで定義ダンプを読み込んだDBでは、反映済みの変更SQLを再実行しない。 [定義ダンプの更新手順](../50-operations/db-change-procedure.md#定義ダンプをリポジトリへ収録する)
 
 ## 変更SQLの順序と本番適用履歴
 

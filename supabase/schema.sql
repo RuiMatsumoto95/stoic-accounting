@@ -2,8 +2,6 @@
 -- PostgreSQL database dump
 --
 
-\restrict PIiYVvXGTGdNVx9yDcHB6xiFEpxBqk3hwRXUgyxHIsXzVYI90LyAkVxy4cUi8WT
-
 -- Dumped from database version 17.6
 -- Dumped by pg_dump version 17.12
 
@@ -4414,6 +4412,3 @@ ALTER DEFAULT PRIVILEGES FOR ROLE supabase_admin IN SCHEMA public GRANT ALL ON T
 --
 -- PostgreSQL database dump complete
 --
-
-\unrestrict PIiYVvXGTGdNVx9yDcHB6xiFEpxBqk3hwRXUgyxHIsXzVYI90LyAkVxy4cUi8WT
-
