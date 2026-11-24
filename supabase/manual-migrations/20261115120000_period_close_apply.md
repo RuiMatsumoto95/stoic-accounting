@@ -1,7 +1,7 @@
 # ステップ3: 年度の確定・ロック — 適用手順
 
 対象: `20261115120000_period_close.sql`（変更）／`20261115120000_period_close.test.sql`（テスト）。
-設計: Project の `SA_step3_design_v1_1.md`・`SA_step3_sql_design_v1.md`（v1.1）。ローカルでの検証結果は `supabase/manual-migrations/step3-sql-report.md`。
+設計: ステップ3・DB（年度確定）。ローカルでの検証結果は `supabase/manual-migrations/step3-sql-report.md`。
 
 > 認証がないため、**確定の解除は誰でもできます**。履歴は操作の記録であり、改ざん防止ではありません（下の「既知の制限」）。
 

@@ -1,7 +1,7 @@
 # ステップ3（年度の確定・ロック）SQL 実装報告（第2版: ChatGPT レビュー対応後）
 
 作成: 2026-11-15（Claude）。対象: `supabase/manual-migrations/20261115120000_period_close{.sql,.test.sql,_apply.md,_concurrency.md}`。
-設計: `SA_step3_design_v1_1.md` / `SA_step3_sql_design_v1.md`（v1.1・ChatGPT 第4回レビュー反映）。**本番・GitHub への適用はしていない。アプリ側は未着手。**
+設計: ステップ3・DB（年度確定。外部レビューの指摘を反映した版）。**本番・GitHub への適用はしていない。アプリ側は未着手。**
 
 ## 0. 先に伝えること（設計・指示との相違／未確認）
 

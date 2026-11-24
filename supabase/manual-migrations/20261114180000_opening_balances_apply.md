@@ -1,7 +1,7 @@
 # 期首残高（A案＋任意期の手動期首残高）: 適用手順
 
 対象: `20261114180000_opening_balances.sql`（変更）／ `.test.sql`（テスト・66項目）／ `20261112120000_company_support.test.sql`（G1・G2 の期待値を変更。136項目）
-設計: Project の `SA_step2_sql_design_v2.md`（ステップ2・DB）
+設計: ステップ2・DB（期首残高）
 
 ## 開発時の確認結果（2026-11-14・ローカル PostgreSQL 16）
 

@@ -1,5 +1,5 @@
 -- ステップ3: 年度の確定（締め）／ロック
--- 設計: claude/SA_step3_sql_design_v1.md（v1.1）。適用前に必ず pg_dump（public）を取得し、_period_close_apply.md の「適用前確認クエリ」を実行すること。
+-- 設計: ステップ3・DB（年度確定）。適用前に必ず pg_dump（public）を取得し、_period_close_apply.md の「適用前確認クエリ」を実行すること。
 -- 既存のオブジェクト（保存RPC・期首残高RPC・導出関数・既存トリガー）は変更しない。
 -- ロック順: 確定・解除・期間変更は「期の行 → 会社の advisory」。書き込み側は「仕訳行 → 期の FOR SHARE」（advisory は取らない）。
 -- 各ブロック（-- ===== で区切る）は単独でも実行できる。Supabase SQL Editor では、ブロックごとに分けて実行してよい。

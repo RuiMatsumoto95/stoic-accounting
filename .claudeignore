@@ -46,7 +46,6 @@ app/tax-summary/*
 # 共通
 *.log
 docs/
-handover/
 
 
 # =============================================================
@@ -67,7 +66,6 @@ handover/
 # lib/csv-import.ts
 # *.log
 # docs/
-# handover/
 
 
 # =============================================================
@@ -93,7 +91,6 @@ handover/
 # app/ledger/*
 # *.log
 # docs/
-# handover/
 
 
 # =============================================================
@@ -118,4 +115,3 @@ handover/
 # lib/display-settings.ts
 # *.log
 # docs/
-# handover/
