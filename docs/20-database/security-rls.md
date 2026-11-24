@@ -51,19 +51,22 @@ related: [README.md, tables.md, functions-rpc.md, migrations.md]
 - `accounts.pl_category` と `accounts.bs_category` には、表の `SELECT` に加えて列単位の `SELECT` も記録されている。
 - 現存する17表とビューのACLには、`anon`／`authenticated` に対する `TRUNCATE`・`REFERENCES`・`TRIGGER` の付与がない。`service_role` には17表とビューに対する `REFERENCES`・`TRIGGER`・`TRUNCATE`・`MAINTAIN` が明示される。
 - `postgres` が今後 `public` に作る表の既定権限には、`anon`／`authenticated`／`service_role` への `REFERENCES`・`TRIGGER`・`TRUNCATE`・`MAINTAIN` が含まれる。新規表では、表そのもののACLとRLSポリシーを確認する。
+- `anon`／`authenticated` の既存表・ビューに残る `MAINTAIN` と、新規表に対するその既定付与は、権限を最小化する際の見直し項目。
 - 履歴3表は `anon`／`authenticated` に `INSERT` を許す。履歴の追加自体から操作の真正性を保証することはできない。`journal_entry_logs.changed_by` の既定値は `'user'` で、トリガーは操作者IDを設定しない。
 
 ## 関数の実行権限
 
 仕訳保存、採番、会社作成、期首残高、年度確定・解除のRPCと、そこから呼ぶ通常の補助関数には、ダンプで `PUBLIC` への `REVOKE ALL` と `anon`／`authenticated` への実行権限の付与がある。これは呼び出し側の権限で動く `SECURITY INVOKER` の関数が、内側の補助関数を呼ぶ際にも必要になる。`opening_balance_account_ok` の [追加付与](migrations.md) がその例。
 
-ダンプには `anon`／`authenticated` に対する関数の明示的な付与が27本分ある。通常関数26本に加え、イベントトリガー用の `rls_auto_enable` が含まれる。通常関数のうち `get_pl_data` と、イベントトリガー用の `rls_auto_enable` には `PUBLIC` への明示的な `REVOKE` が記録されていない。個別の関数は [DB関数とRPC](functions-rpc.md) を参照。
+`insert_journal_lines` と `validate_journal_lines` は仕訳保存の補助関数で、`public` スキーマにあり `anon`／`authenticated` に `EXECUTE` が付与されている。PostgREST が `public` を公開している構成では、保存RPCの外からも呼び出せる。公開範囲の見直しは未対応。
+
+ダンプには `anon`／`authenticated` に対する関数の明示的な付与が27本分ある。通常関数26本に加え、イベントトリガー用の `rls_auto_enable` が含まれる。通常関数のうち `get_pl_data` と、イベントトリガー用の `rls_auto_enable` には `PUBLIC` への明示的な `REVOKE` が記録されていない。`rls_auto_enable()` の実行権限はイベントトリガーの運用と合わせて見直す。個別の関数は [DB関数とRPC](functions-rpc.md) を参照。
 
 ## `ledger_view`
 
 `ledger_view` の定義に `security_invoker = true` はない。基表への権限とRLSはビュー所有者側で評価される。ダンプは所有者情報を含まないため、所有者ロール名はこの定義から特定できない。`anon`／`authenticated` に `SELECT` が付与されており、ビューには `company_id` 列や会社・利用者による絞り込み条件がない。元帳で使う期・科目の絞り込みはアプリのクエリで指定する。
 
-採番の [変更SQL](../../supabase/manual-migrations/20261110170000_auto_reference_number.sql) は伝票番号の型変更に合わせてビューを `DROP VIEW` してから作り直し、`SELECT` を付け直している。
+`DROP VIEW` の後にビューを作り直すと、元のビューの付与権限は引き継がれない。`ledger_view` を作り直したら、アプリで必要なロールへの `GRANT SELECT` を適用し、対象ロールで読み出せることを確認する。採番の変更では `anon` と `authenticated` へ付け直した。 [採番の変更SQL](../../supabase/manual-migrations/20261110170000_auto_reference_number.sql)
 
 ## RLSを自動で有効にする関数
 

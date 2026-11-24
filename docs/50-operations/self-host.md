@@ -1,7 +1,7 @@
 ---
 status: 現行
 verified: 2026-11-24 @ cc4d9d2
-code: [README.md, .env.example, package.json, lib/supabase.ts, lib/yayoi-tax.ts, lib/tax-codes.ts, app/settings/page.tsx, supabase/schema.sql]
+code: [README.md, .env.example, package.json, lib/supabase.ts, lib/yayoi-tax.ts, lib/tax-codes.ts, app/layout.tsx, app/settings/page.tsx, supabase/schema.sql]
 related: [README.md, backup-restore.md, ../10-architecture/security.md, ../20-database/migrations.md, ../60-testing/README.md]
 ---
 
@@ -15,7 +15,9 @@ related: [README.md, backup-restore.md, ../10-architecture/security.md, ../20-da
 
 1. リポジトリのルートで `npm ci` を実行します。
 2. `.env.example` を `.env.local` としてコピーし、試用環境の `NEXT_PUBLIC_SUPABASE_URL` と `NEXT_PUBLIC_SUPABASE_ANON_KEY` を設定します。`.env.local` はGitの追跡対象外です。 [ブラウザーとサーバーの接続](../10-architecture/security.md#ブラウザーとサーバーの接続)
-3. `npm run dev` を実行し、ターミナルに表示された手元のURLで `/journals` を開きます。架空データで、会社の作成、当期の選択、仕訳保存、元帳やPDFでの確認を行います。CSVと税区分を使う場合は、税区分の候補、CSV本登録、税区分別の集計も確認します。 [ブラウザーでの確認](../60-testing/manual-verification.md)
+3. `npm run dev`（`next dev --webpack`）を実行し、ターミナルに表示された手元のURLで `/journals` を開きます。架空データで、会社の作成、当期の選択、仕訳保存、元帳やPDFでの確認を行います。CSVと税区分を使う場合は、税区分の候補、CSV本登録、税区分別の集計も確認します。 [ブラウザーでの確認](../60-testing/manual-verification.md)
+
+`.env.local` などにURLとanonキーの設定がない場合はDBへ接続できません。Webpackの指定は、開発環境でTurbopackが `next/font/google` を解決できなかった際に導入した回避策です。現行のアプリにはこのインポートがなく、現行版のTurbopackでの動作は未確認です。
 
 ## 空の環境から再現するときに残っていること
 

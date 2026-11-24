@@ -1,7 +1,7 @@
 ---
 status: 現行
 verified: 2026-11-24 @ cc4d9d2
-code: [app/csv-import/page.tsx, components/csv-import/CsvUploader.tsx, components/csv-import/StagingTable.tsx, lib/csv-upload.ts, lib/csv-import.ts, lib/csv-import-yayoi.ts, lib/csv-amount.ts, lib/yayoi-tax.ts, lib/mapping-rules.ts, lib/journal-save.ts, components/OpeningBalanceImpactNotice.tsx, supabase/schema.sql]
+code: [app/csv-import/page.tsx, components/csv-import/CsvUploader.tsx, components/csv-import/StagingTable.tsx, lib/csv-upload.ts, lib/csv-import.ts, lib/csv-import-yayoi.ts, lib/csv-amount.ts, lib/yayoi-tax.ts, lib/tax-codes.ts, lib/reports/tax-summary.ts, lib/mapping-rules.ts, lib/journal-save.ts, components/OpeningBalanceImpactNotice.tsx, supabase/schema.sql]
 related: [README.md, settings.md, journals.md, opening-balances.md, ../20-database/functions-rpc.md, ../20-database/tables.md]
 ---
 
@@ -19,6 +19,13 @@ related: [README.md, settings.md, journals.md, opening-balances.md, ../20-databa
 - UTF-8として読み込めないときはShift-JIS系として再読込する。日付は西暦のハイフン形式、スラッシュ形式、8桁、元号記号を使った和暦形式から `YYYY-MM-DD` に正規化する。実在する日付かは本登録時にDBが確認する。
 - 金額は整数円を受け付ける。空欄は0として扱い、少なくとも片側に0より大きい金額が必要。負数や小数部が0以外の値は読み込みエラーになる。日付・科目・金額などの項目検証で1件でもエラーがあれば、ファイルのデータは中間表に追加しない。有効な行がなければ、その旨を表示する。
 - 科目は選択中の会社のデータに対して、正規化した科目名 → 登録済み別名 → マッピングルールの順で照合する。独自形式の税区分は現行マスタのID・名称・略称に照合し、弥生形式は会社の課税方式に合わせて変換する。弥生の税区分変換で警告が付いた場合は、取り込み結果に表示する。
+
+### 弥生形式の税区分変換
+
+- 対象会社の `companies.tax_method` を基準に、弥生の課税表記を区分、内税・税込・外税・別記、簡易課税の事業区分、税率に分解し、`tax_codes.id` に対応づける。「非課税売上」などの固定表記は課税方式にかかわらず対応するIDを使う。課税表記は10%と軽減8%を扱い、税率のない旧表記は通常10%、軽減の指定があれば軽減8%になる。
+- 未知の表記、対応外の税率、会社の課税方式に対応するIDがない課税表記は「対象外」（`OUT_OF_SCOPE`）にし、行・列の警告を表示して確認用データにも記録する。課税方式が初期値の `EXEMPT` のままだと、課税表記はすべてこの扱いになる。固定表記は従来どおり変換する。
+- 簡易課税では、対応する税率の仕入・仕入返還（課税対応・非課税対応・共通対応）の税区分を空にし、警告は出さない。対応外の税率は、課税方式を照合する前に「対象外」へ変換する。
+- 外税・別記の表記が対応するIDに解決した場合は、金額をCSVの値のまま登録し、税抜の可能性を警告する。消費税集計表は借方・貸方と税区分ごとに明細の金額を合計し、税込と税抜を区別しない。 [消費税集計表](tax-summary.md)
 
 ## 未処理データの確認と本登録
 

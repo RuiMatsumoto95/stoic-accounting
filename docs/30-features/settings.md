@@ -1,7 +1,7 @@
 ---
 status: 現行
-verified: 2026-11-24 @ b69542c
-code: [app/settings/page.tsx, components/settings/DisplaySettings.tsx, components/settings/CompanySettings.tsx, components/settings/CompanyCreateForm.tsx, components/settings/CompanyArchiveList.tsx, components/settings/FiscalPeriodSettings.tsx, components/settings/FiscalPeriodModal.tsx, components/layout/CompanySwitcher.tsx, contexts/CompanyContext.tsx, contexts/FiscalPeriodContext.tsx, lib/company-dirty.ts, lib/display-settings.ts, lib/tax-codes.ts, lib/period-close-state.ts, lib/fiscal-period-operations.ts, actions/company-actions.ts, actions/fiscal-period-actions.ts]
+verified: 2026-11-24 @ cc4d9d2
+code: [app/settings/page.tsx, components/settings/DisplaySettings.tsx, components/settings/CompanySettings.tsx, components/settings/CompanyCreateForm.tsx, components/settings/CompanyArchiveList.tsx, components/settings/FiscalPeriodSettings.tsx, components/settings/FiscalPeriodModal.tsx, components/layout/CompanySwitcher.tsx, contexts/CompanyContext.tsx, contexts/FiscalPeriodContext.tsx, lib/company-dirty.ts, lib/display-settings.ts, lib/tax-codes.ts, lib/period-close-state.ts, lib/fiscal-period-operations.ts, actions/company-actions.ts, actions/fiscal-period-actions.ts, lib/company-operations.ts]
 related: [README.md, journals.md, csv-import.md, opening-balances.md, ../20-database/functions-rpc.md, ../20-database/security-rls.md]
 ---
 
@@ -21,7 +21,7 @@ related: [README.md, journals.md, csv-import.md, opening-balances.md, ../20-data
 
 - 会社作成時は会社名、法人・個人の区分、課税方式と最初の会計期を指定する。法人は開始日・終了日を入力し、個人は年を指定すると1月1日〜12月31日になる。DBが会社・初期科目・繰越先・初期の当期をまとめて作成する。画面は作成した会社への切り替えを試みる。
 - ヘッダーの「作業中の会社」を切り替えると、会社の選択を保存して仕訳日記帳を読み直す。未保存入力が登録されている場合は破棄を確認する。別タブで会社が変わったことを検出した画面は再読み込みを求める。
-- アーカイブすると通常の選択候補から消え、アーカイブ済みの一覧から「戻す」で復帰できる。作業中の会社はアーカイブできない。会社名は引き続き予約され、データやPDFへのアクセス権は変わらない。
+- 会社の改名・削除は画面とアプリの操作として未実装。アーカイブすると通常の選択候補から消え、アーカイブ済みの一覧から「戻す」で復帰できる。作業中の会社はアーカイブできない。会社名は引き続き予約され、データやPDFへのアクセス権は変わらない。
 
 ## 会計期間の作成と変更
 
