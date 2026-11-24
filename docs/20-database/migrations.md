@@ -1,7 +1,7 @@
 ---
 status: 現行
-verified: 2026-11-24 @ 5e0e7c9
-code: [supabase/schema.sql, supabase/manual-migrations, CLAUDE.md]
+verified: 2026-11-24 @ 577ae8c
+code: [supabase/schema.sql, supabase/manual-migrations]
 related: [README.md, functions-rpc.md, triggers-constraints.md, security-rls.md]
 ---
 
@@ -13,7 +13,7 @@ related: [README.md, functions-rpc.md, triggers-constraints.md, security-rls.md]
 
 ## 変更SQLの順序と本番適用履歴
 
-変更SQLを適用順に並べる。テスト・手順・検証報告を含め、格納されている全28ファイルを掲載する。日付と結果はリポジトリの [DB適用記録](../../CLAUDE.md#dbルール) と個別の変更SQL・適用手順に基づく。ファイル名の時刻は適用日時の証跡としては扱わない。
+変更SQLを適用順に並べる。テスト・手順・検証報告を含め、格納されている全28ファイルを掲載する。適用日と結果は下の表に記録する。変更内容や検証方法は各SQL・適用手順・検証報告を参照。ファイル名の時刻は適用日時の証跡としては扱わない。 [DB変更の手順](../50-operations/db-change-procedure.md)
 
 | 順 | 変更SQL | 変更内容 | 本番での適用・確認 | 関連ファイル |
 | --- | --- | --- | --- | --- |

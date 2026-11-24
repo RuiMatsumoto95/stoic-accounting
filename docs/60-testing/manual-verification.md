@@ -1,7 +1,7 @@
 ---
 status: 現行
 verified: 2026-11-24 @ 47e0a78
-code: [app/journals/page.tsx, app/settings/page.tsx, app/opening-balances/page.tsx, app/csv-import/page.tsx, app/api/pdf, components/journals, CLAUDE.md]
+code: [app/journals/page.tsx, app/settings/page.tsx, app/opening-balances/page.tsx, app/csv-import/page.tsx, app/api/pdf, components/journals]
 related: [README.md, vitest-and-ci.md, sql-tests.md, ../30-features/README.md, ../50-operations/self-host.md]
 ---
 
@@ -20,4 +20,4 @@ related: [README.md, vitest-and-ci.md, sql-tests.md, ../30-features/README.md, .
 
 結果には、対象コミット、OS・ブラウザー、日本語入力の状態、使った架空データの条件、操作と観察結果を残します。別のブラウザー・入力方式・競合条件は、実行した組み合わせが分かるように記録します。
 
-旧検証記録では、Windows・Chrome・日本語入力有効の環境で、確定前チェック、確定・解除の順序、確定済みの期での仕訳変更の拒否、期首残高とCSVへの確定済み表示などを確認しています。Edge・Google日本語入力、複数タブでの同時編集、確定済みの期でのCSV本登録の拒否表示は未確認と記録されています。 [年度確定のアプリ確認記録](../../CLAUDE.md#ステップ3-年度の確定ロック2026-11-15本番db適用済みアプリ実装実機確認済み)
+2026-11-15の利用者による確認では、Windows・Chrome・日本語入力有効の環境で、確定前チェック、確定・解除の順序、確定済みの期での仕訳変更の拒否、期首残高とCSVへの確定済み表示などを確認しています。Edge・Google日本語入力、複数タブでの同時編集、確定済みの期でのCSV本登録の拒否表示は未確認と記録されています。 [年度の確定と解除](../30-features/settings.md#年度の確定と解除)

@@ -105,4 +105,4 @@ commit;
 - `ledger_view`・RLS・grant の最小化は従来どおり未対応。
 - 一括変更どうしのデッドロック（行ロックの順序が不定）は従来からあり、今回は変えていない。
 - 確認系の関数（`period_close_errors` など5本）は、意図して `VOLATILE`。`STABLE` にすると、同じトランザクション内の PL/pgSQL（DO ブロックなど）で式の中から呼んだとき、直前に同じブロックが書いた行が見えない。
-- Claude のローカル検証は PostgreSQL 16.15。**PostgreSQL 17.12 の回帰検証は Codex が実施済み**（`handover/step3-pg17-regression-report.md`: 既存7テスト380項目が適用前後とも通過・新テスト165項目・ローカル専用4項目・同時実行17シナリオ＋C10・変異5種。現行の新テストは 2026-11-17 に再実行して通過）。本番 17.6 での実行は未実施。pgbench（C6）は PG16 のみ。
+- Claude のローカル検証は PostgreSQL 16.15。PostgreSQL 17.12 で回帰・同時実行を確認済み。pgbench（C6）は PG16 のみ。通常テストの本番適用時の結果は、適用履歴を参照。 [SQLテストの記録](../../docs/60-testing/sql-tests.md#記録にある検証範囲)

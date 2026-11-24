@@ -38,7 +38,7 @@ select id as p3 from fiscal_periods where name='P3' and company_id=(select id fr
 | C9d | 直接 UPDATE で確定 | P1 の終了日の UPDATE | Bは待ち → `PERIOD_CLOSED_FIELDS` |
 | C9e | P1 の終了日の UPDATE（ROLLBACK） | `close_fiscal_period(p1)` | Bは待ち、成功 |
 
-各シナリオは、毎回DBを作り直して実行した。未実施: 本番での実行。PostgreSQL 17.12 では C1〜C5・C7〜C9 と C10 を Codex が実行済み（`handover/step3-pg17-regression-report.md`）。C6（pgbench）は PG16 のみ。
+各シナリオは、毎回DBを作り直して実行した。未実施: 本番での実行。PostgreSQL 17.12 では C1〜C5・C7〜C9 と C10 を実行済み。C6（pgbench）は PG16 のみ。 [SQLテストの記録](../../docs/60-testing/sql-tests.md#記録にある検証範囲)
 
 ## 手順（C1〜C9 すべて）
 

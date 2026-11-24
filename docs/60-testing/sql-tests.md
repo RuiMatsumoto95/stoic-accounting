@@ -1,7 +1,7 @@
 ---
 status: 現行
 verified: 2026-11-24 @ 47e0a78
-code: [supabase/schema.sql, supabase/manual-migrations, CLAUDE.md, .github/workflows/test.yml]
+code: [supabase/schema.sql, supabase/manual-migrations, .github/workflows/test.yml]
 related: [README.md, ../20-database/migrations.md, ../20-database/triggers-constraints.md, ../50-operations/db-change-procedure.md]
 ---
 
@@ -25,4 +25,5 @@ related: [README.md, ../20-database/migrations.md, ../20-database/triggers-const
 
 ## 記録にある検証範囲
 
-年度確定の通常テストは165項目、ローカル専用テストは4項目。PostgreSQL 17で既存のSQLの回帰と複数接続の検証を行った記録があります。年度確定の通常テストは本番適用時にも通過しています。本番の複数接続の検証は未実施と記録されています。 [本番適用履歴](../20-database/migrations.md#変更sqlの順序と本番適用履歴)
+- ローカルのPostgreSQL 17.12では、既存7本の380項目が年度確定の適用前後で通過。年度確定の通常テスト165項目とローカル専用4項目、同時実行の17シナリオとC10、変異テスト5種も確認しました。負荷試験のC6はPostgreSQL 16でのみ実施しました。 [SQL検証報告](../../supabase/manual-migrations/step3-sql-report.md)
+- 2026-11-15の本番適用では、年度確定の165項目に加え、更新版の期首残高66項目、会社対応、アーカイブのテストが通過しました。本番の複数接続の検証は未実施と記録されています。 [本番適用履歴](../20-database/migrations.md#変更sqlの順序と本番適用履歴)

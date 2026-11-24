@@ -1,8 +1,8 @@
 ---
 status: 採用
 decided: 2026-11-18
-verified: 2026-11-24 @ 2e76288
-code: [CLAUDE.md, .gitignore, .gitattributes, README.md]
+verified: 2026-11-24 @ 577ae8c
+code: [.gitignore, .gitattributes, README.md]
 related: [README.md, ADR-0013, ADR-0015, ../README.md]
 ---
 
@@ -32,4 +32,4 @@ related: [README.md, ADR-0013, ADR-0015, ../README.md]
 
 ## 根拠
 
-公開前監査の履歴比較と、公開方針D2・D3の2026-11-18の決定。現行リポジトリは公開用に切り出した初回コミットから始まり、既存の作業メモにも旧資料の公開範囲が記されている。 [作業メモ冒頭の注記](../../CLAUDE.md) [追跡対象外の設定](../../.gitignore)
+公開前監査の履歴比較と、公開範囲についての2026-11-18の決定。現行リポジトリは公開用に切り出した初回コミットから始まる。 [公開前の点検手順](../50-operations/release.md) [追跡対象外の設定](../../.gitignore)

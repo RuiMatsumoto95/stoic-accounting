@@ -1,8 +1,8 @@
 ---
 status: 現行
-verified: 2026-11-xx @ <コミットの短縮ハッシュ>
-code: []
-related: []
+verified: 2026-11-24 @ 577ae8c
+code: [scripts/check-docs.mjs]
+related: [roadmap.md, ../CHANGELOG.md, ../CLAUDE.md]
 ---
 
 # Stoic Accounting ドキュメント索引
@@ -21,6 +21,8 @@ related: []
 | [70-ideas](./70-ideas/) | 未実装のアイデア |
 | [90-notes](./90-notes/) | 未検証のメモ（公開してよい内容のみ） |
 | [roadmap.md](./roadmap.md) | 公開ロードマップ（状態表） |
+
+実装済みの変更は [変更履歴](../CHANGELOG.md)、開発時に守るルールは [CLAUDE.md](../CLAUDE.md) を参照してください。
 
 ## 書き方の約束
 
