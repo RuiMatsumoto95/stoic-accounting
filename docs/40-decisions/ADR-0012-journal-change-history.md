@@ -1,7 +1,7 @@
 ---
 status: 採用
 decided: 2026-11-01
-verified: 2026-11-24 @ 2e76288
+verified: 2026-11-24 @ cc4d9d2
 code: [supabase/schema.sql, supabase/manual-migrations/20261101000000_suppress_chained_update_logs.sql, supabase/manual-migrations/20261101180000_atomic_journal_save.test.sql, lib/journal-save.ts]
 related: [README.md, ADR-0002, ../20-database/triggers-constraints.md, ../20-database/security-rls.md]
 ---

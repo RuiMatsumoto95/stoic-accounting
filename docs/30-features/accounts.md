@@ -1,6 +1,6 @@
 ---
 status: 現行
-verified: 2026-11-24 @ b69542c
+verified: 2026-11-24 @ cc4d9d2
 code: [app/accounts/page.tsx, lib/account-master.ts, lib/account-master-options.ts, lib/accounts.ts, lib/account-search.ts, components/layout/NavLinks.tsx, supabase/schema.sql]
 related: [README.md, journals.md, opening-balances.md, ../20-database/tables.md, ../20-database/triggers-constraints.md]
 ---

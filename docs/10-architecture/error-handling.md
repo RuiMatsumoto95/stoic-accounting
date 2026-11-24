@@ -1,6 +1,6 @@
 ---
 status: 現行
-verified: 2026-11-24 @ 95645b1
+verified: 2026-11-24 @ cc4d9d2
 code: [lib/errors.ts, lib/supabase-error-handler.ts, lib/toast.tsx, app/layout.tsx, lib/company-guard.ts, lib/company-scope.ts, lib/journal-save.ts, lib/reports/scope.ts, actions/company-actions.ts, actions/fiscal-period-actions.ts, app/journals/page.tsx, app/csv-import/page.tsx, components/journals/InlineEditRow.tsx, components/opening-balances/OpeningBalanceEditor.tsx, components/pdf/PDFButton.tsx, app/api/pdf, supabase/schema.sql]
 related: [README.md, company-scope.md, pdf.md, ../20-database/functions-rpc.md, ../30-features/journals.md, ../30-features/csv-import.md]
 ---

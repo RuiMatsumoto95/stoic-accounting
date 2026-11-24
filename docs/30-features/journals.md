@@ -1,6 +1,6 @@
 ---
 status: 現行
-verified: 2026-11-24 @ b69542c
+verified: 2026-11-24 @ cc4d9d2
 code: [app/journals/page.tsx, app/globals.css, components/journals, lib/journal-fetch.ts, lib/journal-order.ts, lib/journal-paging.ts, lib/journal-cell-shortcuts.ts, lib/inline-form-navigation.ts, lib/journal-duplicate.ts, lib/ime-free-input.ts, lib/date-input.ts, lib/account-search.ts, lib/amount-sync.ts, lib/reference-number.ts, lib/journal-save.ts, lib/csv-export.ts, lib/tax-codes.ts, lib/reports/journal.ts, app/api/pdf/journal/route.ts, components/pdf/documents/JournalDocument.tsx, components/OpeningBalanceImpactNotice.tsx, components/PeriodClosedNotice.tsx, supabase/schema.sql]
 related: [README.md, settings.md, accounts.md, csv-import.md, opening-balances.md, ../20-database/functions-rpc.md, ../20-database/triggers-constraints.md]
 ---

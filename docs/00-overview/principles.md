@@ -1,6 +1,6 @@
 ---
 status: 現行
-verified: 2026-11-24 @ 1e6a903
+verified: 2026-11-24 @ cc4d9d2
 code: [components/journals/InlineJournalForm.tsx, lib/ime-free-input.ts, lib/journal-save.ts, lib/csv-import.ts, lib/financial-statements.ts, supabase/schema.sql, README.md, LICENSE]
 related: [README.md, glossary.md, ../40-decisions/README.md, ../70-ideas/backlog.md]
 ---

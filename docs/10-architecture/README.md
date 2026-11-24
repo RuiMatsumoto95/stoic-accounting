@@ -1,6 +1,6 @@
 ---
 status: 現行
-verified: 2026-11-24 @ 95645b1
+verified: 2026-11-24 @ cc4d9d2
 code: [app/layout.tsx, package.json, package-lock.json, contexts, lib/supabase.ts, lib/reports/scope.ts, app/api/pdf, supabase/schema.sql]
 related: [../README.md, tech-stack.md, directory-structure.md, company-scope.md, error-handling.md, pdf.md, security.md, ../20-database/README.md, ../30-features/README.md]
 ---

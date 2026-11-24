@@ -1,7 +1,7 @@
 ---
 status: 採用
 decided: 2026-11-13
-verified: 2026-11-24 @ 2e76288
+verified: 2026-11-24 @ cc4d9d2
 code: [supabase/schema.sql, supabase/manual-migrations/20261112120000_company_support.sql, lib/company-operations.ts, components/settings/CompanyCreateForm.tsx, lib/opening-balances.ts]
 related: [README.md, ADR-0004, ADR-0006, ADR-0007, ../30-features/settings.md, ../30-features/opening-balances.md]
 ---

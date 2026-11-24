@@ -1,6 +1,6 @@
 ---
 status: 現行
-verified: 2026-11-24 @ b69542c
+verified: 2026-11-24 @ cc4d9d2
 code: [app/opening-balances/page.tsx, components/opening-balances/OpeningBalanceEditor.tsx, lib/opening-balances.ts, lib/opening-balance-impact.ts, components/OpeningBalanceImpactNotice.tsx, components/PeriodClosedNotice.tsx, lib/fiscal-period.ts, supabase/schema.sql]
 related: [README.md, settings.md, journals.md, csv-import.md, ledger.md, balance-sheet.md, ../20-database/functions-rpc.md]
 ---

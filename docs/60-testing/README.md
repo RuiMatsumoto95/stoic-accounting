@@ -1,6 +1,6 @@
 ---
 status: 現行
-verified: 2026-11-24 @ 47e0a78
+verified: 2026-11-24 @ cc4d9d2
 code: [package.json, vitest.config.mts, .github/workflows/test.yml, __tests__, supabase/manual-migrations, scripts/check-docs.mjs]
 related: [vitest-and-ci.md, sql-tests.md, manual-verification.md, ../50-operations/db-change-procedure.md]
 ---

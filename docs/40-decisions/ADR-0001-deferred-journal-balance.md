@@ -1,7 +1,7 @@
 ---
 status: 採用
 decided: 2026-11-01
-verified: 2026-11-24 @ 2e76288
+verified: 2026-11-24 @ cc4d9d2
 code: [supabase/schema.sql, supabase/manual-migrations/20261101180100_enforce_journal_balance.sql, supabase/manual-migrations/20261101180100_enforce_journal_balance.test.sql]
 related: [README.md, ADR-0002, ../20-database/triggers-constraints.md]
 ---

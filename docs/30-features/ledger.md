@@ -1,6 +1,6 @@
 ---
 status: 現行
-verified: 2026-11-24 @ b69542c
+verified: 2026-11-24 @ cc4d9d2
 code: [app/ledger/page.tsx, app/api/pdf/ledger/route.ts, lib/reports/ledger.ts, components/ledger/LedgerTable.tsx, components/pdf/documents/LedgerDocument.tsx, lib/balance-calculator.ts, supabase/schema.sql]
 related: [README.md, subsidiary-ledger.md, opening-balances.md, ../20-database/tables.md]
 ---

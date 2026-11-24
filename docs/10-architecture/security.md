@@ -1,6 +1,6 @@
 ---
 status: 現行
-verified: 2026-11-24 @ 95645b1
+verified: 2026-11-24 @ cc4d9d2
 code: [README.md, SECURITY.md, CLAUDE.md, .env.example, .gitignore, app, actions, contexts/CompanyContext.tsx, lib/supabase.ts, lib/company-cookie.ts, lib/company-guard.ts, lib/reports/scope.ts, supabase/schema.sql, supabase/manual-migrations/20261115120000_period_close.sql]
 related: [README.md, company-scope.md, error-handling.md, pdf.md, ../20-database/security-rls.md, ../20-database/triggers-constraints.md]
 ---

@@ -1,7 +1,7 @@
 ---
 status: 採用
 decided: 2026-11-15
-verified: 2026-11-24 @ 2e76288
+verified: 2026-11-24 @ cc4d9d2
 code: [supabase/schema.sql, supabase/manual-migrations/20261115120000_period_close.sql, supabase/manual-migrations/20261115120000_period_close.test.sql, lib/fiscal-period-operations.ts, components/settings/FiscalPeriodSettings.tsx]
 related: [README.md, ADR-0009, ../20-database/functions-rpc.md, ../20-database/triggers-constraints.md, ../30-features/settings.md]
 ---

@@ -1,7 +1,7 @@
 ---
 status: 採用
 decided: 2026-11-18
-verified: 2026-11-24 @ 577ae8c
+verified: 2026-11-24 @ cc4d9d2
 code: [.gitignore, .gitattributes, README.md]
 related: [README.md, ADR-0013, ADR-0015, ../README.md]
 ---

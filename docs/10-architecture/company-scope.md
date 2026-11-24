@@ -1,6 +1,6 @@
 ---
 status: 現行
-verified: 2026-11-24 @ 95645b1
+verified: 2026-11-24 @ cc4d9d2
 code: [app/layout.tsx, app/settings/page.tsx, contexts/CompanyContext.tsx, contexts/FiscalPeriodContext.tsx, components/layout/CompanySwitcher.tsx, actions/company-actions.ts, actions/fiscal-period-actions.ts, lib/company.ts, lib/company-cookie.ts, lib/company-guard.ts, lib/company-dirty.ts, lib/company-server.ts, lib/company-scope.ts, lib/company-operations.ts, lib/fiscal-period.ts, lib/fiscal-period-operations.ts, lib/journal-save.ts, lib/account-master.ts, lib/journal-templates.ts, lib/opening-balances.ts, lib/reports/scope.ts, app/api/pdf, supabase/schema.sql]
 related: [README.md, security.md, pdf.md, error-handling.md, ../30-features/settings.md, ../20-database/tables.md]
 ---

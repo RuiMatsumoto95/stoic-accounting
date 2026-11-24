@@ -1,6 +1,6 @@
 ---
 status: 現行
-verified: 2026-11-24 @ 47e0a78
+verified: 2026-11-24 @ cc4d9d2
 code: [README.md, SECURITY.md, CONTRIBUTING.md, LICENSE, NOTICE, .gitignore, .github/workflows/test.yml, scripts/check-docs.mjs]
 related: [README.md, ../40-decisions/ADR-0013-apache-license.md, ../40-decisions/ADR-0014-clean-public-repository.md, ../40-decisions/ADR-0015-source-before-hosted-demo.md, ../60-testing/README.md]
 ---

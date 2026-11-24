@@ -1,6 +1,6 @@
 ---
 status: 現行
-verified: 2026-11-24 @ 5e0e7c9
+verified: 2026-11-24 @ cc4d9d2
 code: [supabase/schema.sql, lib/journal-save.ts, lib/company-operations.ts, lib/opening-balances.ts, lib/fiscal-period-operations.ts, lib/errors.ts, lib/supabase-error-handler.ts]
 related: [README.md, triggers-constraints.md, security-rls.md, tables.md]
 ---

@@ -1,6 +1,6 @@
 ---
 status: 現行
-verified: 2026-11-24 @ 577ae8c
+verified: 2026-11-24 @ cc4d9d2
 code: [README.md, SECURITY.md, CONTRIBUTING.md, LICENSE, package.json, .github/workflows/test.yml, app, lib, supabase/schema.sql, supabase/manual-migrations]
 related: [README.md, ../CHANGELOG.md, 40-decisions/ADR-0015-source-before-hosted-demo.md, 50-operations/release.md, 70-ideas/backlog.md]
 ---

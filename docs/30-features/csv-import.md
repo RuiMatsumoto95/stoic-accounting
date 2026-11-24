@@ -1,6 +1,6 @@
 ---
 status: 現行
-verified: 2026-11-24 @ b69542c
+verified: 2026-11-24 @ cc4d9d2
 code: [app/csv-import/page.tsx, components/csv-import/CsvUploader.tsx, components/csv-import/StagingTable.tsx, lib/csv-upload.ts, lib/csv-import.ts, lib/csv-import-yayoi.ts, lib/csv-amount.ts, lib/yayoi-tax.ts, lib/mapping-rules.ts, lib/journal-save.ts, components/OpeningBalanceImpactNotice.tsx, supabase/schema.sql]
 related: [README.md, settings.md, journals.md, opening-balances.md, ../20-database/functions-rpc.md, ../20-database/tables.md]
 ---

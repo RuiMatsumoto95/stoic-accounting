@@ -1,6 +1,6 @@
 ---
 status: 現行
-verified: 2026-11-24 @ 47e0a78
+verified: 2026-11-24 @ cc4d9d2
 code: [README.md, .env.example, package.json, lib/supabase.ts, lib/yayoi-tax.ts, lib/tax-codes.ts, app/settings/page.tsx, supabase/schema.sql]
 related: [README.md, backup-restore.md, ../10-architecture/security.md, ../20-database/migrations.md, ../60-testing/README.md]
 ---

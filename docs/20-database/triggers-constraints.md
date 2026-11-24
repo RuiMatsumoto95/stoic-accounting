@@ -1,6 +1,6 @@
 ---
 status: 現行
-verified: 2026-11-24 @ 5e0e7c9
+verified: 2026-11-24 @ cc4d9d2
 code: [supabase/schema.sql, supabase/manual-migrations/20261115120000_period_close_concurrency.md]
 related: [README.md, tables.md, functions-rpc.md, security-rls.md]
 ---

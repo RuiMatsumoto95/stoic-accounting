@@ -1,6 +1,6 @@
 ---
 status: 現行
-verified: 2026-11-24 @ 5e0e7c9
+verified: 2026-11-24 @ cc4d9d2
 code: [supabase/schema.sql, lib/reports/ledger.ts, lib/reports/subsidiary-ledger.ts]
 related: [README.md, triggers-constraints.md, security-rls.md]
 ---

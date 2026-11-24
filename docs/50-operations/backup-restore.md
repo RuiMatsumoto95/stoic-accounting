@@ -1,6 +1,6 @@
 ---
 status: 現行
-verified: 2026-11-24 @ 47e0a78
+verified: 2026-11-24 @ cc4d9d2
 code: [supabase/schema.sql, supabase/manual-migrations/20261115120000_period_close_apply.md, supabase/manual-migrations]
 related: [README.md, db-change-procedure.md, self-host.md, ../20-database/tables.md, ../60-testing/sql-tests.md]
 ---

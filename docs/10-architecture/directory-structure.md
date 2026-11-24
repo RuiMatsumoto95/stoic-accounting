@@ -1,6 +1,6 @@
 ---
 status: 現行
-verified: 2026-11-24 @ 95645b1
+verified: 2026-11-24 @ cc4d9d2
 code: [app, actions, contexts, components, lib, public, supabase, __tests__, scripts, next.config.ts, tsconfig.json, vitest.config.mts, .github/workflows/test.yml]
 related: [README.md, tech-stack.md, company-scope.md, pdf.md, ../30-features/README.md, ../20-database/README.md]
 ---

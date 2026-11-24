@@ -1,6 +1,6 @@
 ---
 status: 現行
-verified: 2026-11-24 @ 5e0e7c9
+verified: 2026-11-24 @ cc4d9d2
 code: [supabase/schema.sql, supabase/manual-migrations/20261110170000_auto_reference_number.sql, supabase/manual-migrations/20261114190000_grant_opening_balance_account_ok.sql, lib/supabase.ts, lib/company-operations.ts, lib/reports/ledger.ts, lib/reports/subsidiary-ledger.ts]
 related: [README.md, tables.md, functions-rpc.md, migrations.md]
 ---

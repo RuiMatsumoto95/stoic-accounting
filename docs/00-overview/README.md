@@ -1,6 +1,6 @@
 ---
 status: 現行
-verified: 2026-11-24 @ 1e6a903
+verified: 2026-11-24 @ cc4d9d2
 code: [app/journals/page.tsx, app/settings/page.tsx, app/csv-import/page.tsx, app/opening-balances/page.tsx, lib/financial-statements.ts, lib/csv-export.ts, lib/supabase.ts, supabase/schema.sql]
 related: [principles.md, glossary.md, ../30-features/README.md, ../10-architecture/security.md]
 ---

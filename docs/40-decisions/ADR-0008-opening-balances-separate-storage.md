@@ -1,7 +1,7 @@
 ---
 status: 採用
 decided: 2026-11-14
-verified: 2026-11-24 @ 2e76288
+verified: 2026-11-24 @ cc4d9d2
 code: [supabase/schema.sql, supabase/manual-migrations/20261114180000_opening_balances.sql, supabase/manual-migrations/20261114180000_opening_balances.test.sql, lib/opening-balances.ts, lib/journal-save.ts]
 related: [README.md, ADR-0001, ADR-0006, ADR-0007, ../30-features/opening-balances.md, ../20-database/tables.md]
 ---

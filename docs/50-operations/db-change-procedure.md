@@ -1,6 +1,6 @@
 ---
 status: 現行
-verified: 2026-11-24 @ 47e0a78
+verified: 2026-11-24 @ cc4d9d2
 code: [supabase/schema.sql, supabase/manual-migrations, CLAUDE.md, lib/journal-save.ts]
 related: [README.md, backup-restore.md, ../20-database/migrations.md, ../20-database/security-rls.md, ../60-testing/sql-tests.md]
 ---

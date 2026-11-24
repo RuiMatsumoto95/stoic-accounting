@@ -1,6 +1,6 @@
 ---
 status: 現行
-verified: 2026-11-24 @ 5e0e7c9
+verified: 2026-11-24 @ cc4d9d2
 code: [supabase/schema.sql, supabase/manual-migrations]
 related: [../README.md, tables.md, functions-rpc.md, triggers-constraints.md, security-rls.md, migrations.md]
 ---

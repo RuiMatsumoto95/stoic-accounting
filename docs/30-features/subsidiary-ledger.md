@@ -1,6 +1,6 @@
 ---
 status: 現行
-verified: 2026-11-24 @ b69542c
+verified: 2026-11-24 @ cc4d9d2
 code: [app/subsidiary-ledger/page.tsx, app/api/pdf/subsidiary-ledger/route.ts, lib/reports/subsidiary-ledger.ts, components/pdf/documents/SubsidiaryLedgerDocument.tsx, lib/balance-calculator.ts, supabase/schema.sql]
 related: [README.md, ledger.md, subsidiary-balance.md, opening-balances.md, ../20-database/tables.md]
 ---

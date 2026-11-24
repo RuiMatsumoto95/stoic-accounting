@@ -1,6 +1,6 @@
 ---
 status: 現行
-verified: 2026-11-24 @ 47e0a78
+verified: 2026-11-24 @ cc4d9d2
 code: [supabase/schema.sql, supabase/manual-migrations, .github/workflows/test.yml]
 related: [README.md, ../20-database/migrations.md, ../20-database/triggers-constraints.md, ../50-operations/db-change-procedure.md]
 ---
@@ -12,7 +12,7 @@ related: [README.md, ../20-database/migrations.md, ../20-database/triggers-const
 ## 通常のテスト
 
 1. 架空データを使える検証DBを用意し、対象テストの冒頭に記された前提を確認します。現行スキーマを使う場合は、ダンプに含まれる変更の再適用は不要です。
-2. `.test.sql` のファイル全体を一度に実行します。`DO` ブロックが準備・検証を行い、最後に意図的に例外を発生させてテストの変更を取り消します。
+2. `.test.sql` のファイル全体を一度に実行します。検証には `DO` ブロックを使い、最後の意図的な例外でテストの変更を取り消します。
 3. 結果に `TEST RESULT: ALL PASSED` が含まれ、チェック数が対象の版と一致すれば成功です。`FAILED` や途中のエラーが出た場合は、項目名とエラーを確認します。成功時にも例外を返す形式なので、SQLクライアントの終了コードだけでは判定できません。
 4. 年度確定の `.test_local.sql` は `session_replication_role = replica` を使うローカル専用テストです。本番DBでは通常の `.test.sql` を使用します。 [年度確定のテスト](../../supabase/manual-migrations/20261115120000_period_close.test.sql)・[ローカル専用テスト](../../supabase/manual-migrations/20261115120000_period_close.test_local.sql)
 

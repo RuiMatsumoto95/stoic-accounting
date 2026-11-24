@@ -1,6 +1,6 @@
 ---
 status: 現行
-verified: 2026-11-24 @ 95645b1
+verified: 2026-11-24 @ cc4d9d2
 code: [package.json, package-lock.json, next.config.ts, tsconfig.json, postcss.config.mjs, eslint.config.mjs, vitest.config.mts, .github/workflows/test.yml, .env.example, components.json, app/globals.css, lib/supabase.ts, lib/toast.tsx, lib/csv-export.ts, components/csv-import/CsvUploader.tsx, supabase/schema.sql]
 related: [README.md, directory-structure.md, pdf.md, security.md, ../20-database/migrations.md]
 ---

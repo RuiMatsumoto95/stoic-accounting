@@ -1,7 +1,7 @@
 ---
 status: 採用
 decided: 2026-11-18
-verified: 2026-11-24 @ 2e76288
+verified: 2026-11-24 @ cc4d9d2
 code: [LICENSE, NOTICE, package.json, README.md, public/fonts/OFL.txt]
 related: [README.md, ADR-0014, ADR-0015, ../10-architecture/tech-stack.md]
 ---

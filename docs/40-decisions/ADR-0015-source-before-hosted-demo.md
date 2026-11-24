@@ -1,7 +1,7 @@
 ---
 status: 採用
 decided: 2026-11-18
-verified: 2026-11-24 @ 2e76288
+verified: 2026-11-24 @ cc4d9d2
 code: [README.md, SECURITY.md, lib/supabase.ts, app/api/pdf, supabase/schema.sql]
 related: [README.md, ADR-0014, ../10-architecture/security.md, ../20-database/security-rls.md, ../roadmap.md]
 ---

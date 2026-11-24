@@ -1,6 +1,6 @@
 ---
 status: 現行
-verified: 2026-11-24 @ 1e6a903
+verified: 2026-11-24 @ cc4d9d2
 code: [contexts/CompanyContext.tsx, contexts/FiscalPeriodContext.tsx, lib/journal-save.ts, lib/balance-calculator.ts, lib/opening-balances.ts, lib/csv-import.ts, supabase/schema.sql]
 related: [README.md, ../30-features/README.md, ../20-database/tables.md]
 ---

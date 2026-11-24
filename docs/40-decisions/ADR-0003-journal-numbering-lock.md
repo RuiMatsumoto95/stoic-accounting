@@ -1,7 +1,7 @@
 ---
 status: 採用
 decided: 2026-11-10
-verified: 2026-11-24 @ 2e76288
+verified: 2026-11-24 @ cc4d9d2
 code: [supabase/schema.sql, supabase/manual-migrations/20261110170000_auto_reference_number.sql, supabase/manual-migrations/20261110170000_auto_reference_number.test.sql, lib/journal-save.ts, lib/reference-number.ts, app/journals/page.tsx]
 related: [README.md, ADR-0001, ADR-0002, ../20-database/triggers-constraints.md, ../20-database/functions-rpc.md]
 ---
