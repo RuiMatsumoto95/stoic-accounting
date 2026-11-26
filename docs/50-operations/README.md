@@ -1,6 +1,6 @@
 ---
 status: 現行
-verified: 2026-11-24 @ cc4d9d2
+verified: 2026-11-26 @ 361f869
 code: [README.md, CLAUDE.md, .github/workflows/test.yml, supabase/schema.sql, supabase/manual-migrations]
 related: [db-change-procedure.md, backup-restore.md, self-host.md, release.md, ../60-testing/README.md]
 ---
