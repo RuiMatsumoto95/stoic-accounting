@@ -1,17 +1,17 @@
 ---
 status: 現行
-verified: 2026-11-24 @ cc4d9d2
+verified: 2026-11-26 @ 361f869
 code: [README.md, SECURITY.md, CONTRIBUTING.md, LICENSE, package.json, .github/workflows/test.yml, app, lib, supabase/schema.sql, supabase/manual-migrations]
 related: [README.md, ../CHANGELOG.md, 40-decisions/ADR-0015-source-before-hosted-demo.md, 50-operations/release.md, 70-ideas/backlog.md]
 ---
 
 # 公開ロードマップ
 
-ソースの公開を先に進め、公開デモ、帳票の拡充、自己ホストと共同利用を段階的に検討します。表は現段階の状態と次の目標を示します。公開日や着手日は未定です。 [ソース公開とデモの設計判断](40-decisions/ADR-0015-source-before-hosted-demo.md)
+ソースの公開を先に進め、公開デモ、帳票の拡充、自己ホストと共同利用を段階的に検討します。ソースは2026-11-26に公開しました。表は現段階の状態と次の目標を示します。以降の段階の公開日や着手日は未定です。 [ソース公開とデモの設計判断](40-decisions/ADR-0015-source-before-hosted-demo.md)
 
 | 段階 | 状態 | 現在地・次の目標 |
 | --- | --- | --- |
-| ソース公開 | 準備中 | Apache License 2.0、利用範囲、報告窓口、CI、仕様・設計判断・手順を用意。ソースの公開前点検を進める。現段階の利用範囲は架空データでの試用。 [公開の手順](50-operations/release.md) |
+| ソース公開 | 公開済み（2026-11-26） | Apache License 2.0、利用範囲、報告窓口、CI、仕様・設計判断・手順を用意して公開。公開前に追跡ファイルと履歴を点検し、公開と同じ作業で非公開の脆弱性報告・Secret scanning・Push protectionを有効にした。現段階の利用範囲は架空データでの試用。以後の更新でも公開前の確認を行う。 [公開の手順](50-operations/release.md) |
 | 閲覧専用デモ | 未実装 | 架空データで仕訳や帳票を閲覧できる環境と、DBまで含めた読み取り専用の権限を整える。初回の画面案内、訂正・削除履歴の閲覧、決算書CSVも候補。 [バックログ](70-ideas/backlog.md) |
 | 帳票とデータ持ち出し | 一部実装 | 損益計算書と貸借対照表の前期比較、仕訳CSV、帳票PDFは実装済み。帳簿チェック、月次推移、比較対象・帳票の拡大、会社単位と弥生形式のエクスポートを検討する。 [会計期と帳票](70-ideas/backlog.md#会計期と帳票)・[CSV取込とデータの持ち出し](70-ideas/backlog.md#csv取込とデータの持ち出し) |
 | 自己ホスト | 構築手順を準備中 | 既存の試用DBに接続する方法を記載済み。空のSupabaseでの定義と税区分マスタの初期化、アプリでの一連の確認、SQLテストの自動実行が残る。 [自己ホストの前提](50-operations/self-host.md) |
